@@ -1,3 +1,12 @@
 out/
 logs/
 __pycache__/
+
+Data/
+
+preprocessing/RAFT/
+preprocessing/chain_raft.py
+preprocessing/dino/
+preprocessing/exhaustive_raft.py
+preprocessing/extract_dino_features.py
+preprocessing/filter_raft.py
