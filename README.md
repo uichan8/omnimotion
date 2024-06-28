@@ -1,7 +1,14 @@
 # omnimotion
 
 ## 환경설정
+### 코드 다운로드
+```bash
+git clone --recurse-submodules https://github.com/uichan8/omnimotion.git #https 사용 (권장)
+git clone --recurse-submodules git@github.com:uichan8/omnimotion.git #ssh 사용
+```
+
 ### conda
+
 ### docker
 
 ## Train
