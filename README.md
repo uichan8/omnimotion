@@ -36,6 +36,7 @@ cd preprocessing/
 mv exhaustive_raft.py filter_raft.py chain_raft.py RAFT/;
 cd RAFT; ./download_models.sh; cd ../
 mv extract_dino_features.py dino/
+cd ../
 ```
 
 #### 3. RAFT로 Optical flow 구하기
