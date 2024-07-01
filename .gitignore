@@ -3,6 +3,3 @@ logs/
 __pycache__/
 
 Data/
-
-preprocessing/RAFT/
-preprocessing/dino/
