@@ -7,8 +7,20 @@ git clone --recurse-submodules https://github.com/uichan8/omnimotion.git #https 
 git clone --recurse-submodules git@github.com:uichan8/omnimotion.git #ssh 사용
 ```
 ### conda
+```bash
+conda env create -f environment.yml
+```
+- 오류나면 거의 cuda 버전 일 수 있음 docker 환경 사용 권장
 
 ### docker
+- 도커 이미지 생성
+```bash
+sudo docker build -t omnimotion .
+```
+- 도커 이미지 실행
+```bash
+docker run --gpus all -it --rm --name omnimotion -v $(pwd):/omnimotion omnimotion
+```
 
 ## Train
 ### Data Preparation

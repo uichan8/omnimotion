@@ -52,7 +52,7 @@ def normalize_coords(coords, h, w, no_shift=False):
 
 def run(args):
     feature_name = 'dino'
-    scene_dir = args.data_dir
+    scene_dir = os.path.join("..",args.data_dir)
     print('chaining raft optical flow for {}....'.format(scene_dir))
 
     img_files = sorted(glob.glob(os.path.join(scene_dir, 'color', '*')))

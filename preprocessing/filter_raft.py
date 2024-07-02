@@ -29,7 +29,7 @@ DEVICE = 'cuda'
 
 def run_filtering(args):
     feature_name = 'dino'
-    scene_dir = args.data_dir
+    scene_dir = os.path.join("..",args.data_dir)
     print('flitering raft optical flow for {}....'.format(scene_dir))
 
     img_files = sorted(glob.glob(os.path.join("..",scene_dir, 'color', '*')))
@@ -47,7 +47,7 @@ def run_filtering(args):
     grid = gen_grid(h, w, device=DEVICE).permute(2, 0, 1)[None]
     grid_normed = normalize_coords(grid.squeeze().permute(1, 2, 0), h, w)  # [h, w, 2]
 
-    features = [torch.from_numpy(np.load(os.path.join("..",scene_dir, 'features', feature_name,
+    features = [torch.from_numpy(np.load(os.path.join(scene_dir, 'features', feature_name,
                                                       os.path.basename(img_file) + '.npy'))).float().to(DEVICE)
                 for img_file in img_files]
 

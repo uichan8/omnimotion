@@ -38,7 +38,7 @@ def run_exhaustive_flow(args):
     model.to(DEVICE)
     model.eval()
 
-    data_dir = args.data_dir
+    data_dir = os.path.join("..",args.data_dir)
     print('computing all pairwise optical flows for {}...'.format(data_dir))
 
     flow_out_dir = os.path.join(data_dir, 'raft_exhaustive')
