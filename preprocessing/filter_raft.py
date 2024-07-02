@@ -32,7 +32,7 @@ def run_filtering(args):
     scene_dir = os.path.join("..",args.data_dir)
     print('flitering raft optical flow for {}....'.format(scene_dir))
 
-    img_files = sorted(glob.glob(os.path.join("..",scene_dir, 'color', '*')))
+    img_files = sorted(glob.glob(os.path.join(scene_dir, 'color', '*')))
     num_imgs = len(img_files)
     pbar = tqdm(total=num_imgs * (num_imgs - 1))
 

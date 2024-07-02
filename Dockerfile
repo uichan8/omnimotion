@@ -15,5 +15,6 @@ RUN apt-get update && apt-get install -y \
 
 # 추가적인 Python 패키지 설치 (필요에 따라 수정)
 RUN pip install --upgrade pip
+RUN pip install --upgrade typing_extensions
 RUN pip install matplotlib tensorboard scipy opencv-python tqdm tensorboardX configargparse ipdb kornia imageio[ffmpeg]
 
