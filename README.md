@@ -32,9 +32,9 @@ ffmpeg -i example.mp4 -vf scale=640:480 sequence_name/color/%05d.jpg #480p
 - RAFT를 설치하는 코드는 다음과 같습니다. 이 코드는 설치하는 과정이기떄문에 한번만 실행합니다.
 ```bash
 cd preprocessing/  
-mv exhaustive_raft.py filter_raft.py chain_raft.py RAFT/;
+cp exhaustive_raft.py filter_raft.py chain_raft.py RAFT/;
 cd RAFT; ./download_models.sh; cd ../
-mv extract_dino_features.py dino/
+cp extract_dino_features.py dino/
 cd ../
 ```
 

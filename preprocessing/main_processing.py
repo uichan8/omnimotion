@@ -6,7 +6,7 @@ import argparse
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--data_dir', type=str, required=True, help='dataset dir')
+    parser.add_argument('--data_dir', default="../Data/butterfly",type=str, help='dataset dir')
     parser.add_argument('--model', default='models/raft-things.pth', help="restore checkpoint")
     parser.add_argument('--cycle_th', type=float, default=3., help='threshold for cycle consistency error')
     parser.add_argument('--chain', action='store_true', help='if chaining cycle consistent flows (optional)')

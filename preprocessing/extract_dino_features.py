@@ -105,7 +105,7 @@ if __name__ == '__main__':
         param.requires_grad = False
     model.eval()
 
-    scene_dir = args.data_dir
+    scene_dir = os.path.join("..",args.data_dir)
 
     frame_list = sorted(glob.glob(os.path.join(scene_dir, 'color', '*')))
     save_dir = os.path.join(scene_dir, 'features', 'dino')

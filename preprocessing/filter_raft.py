@@ -32,7 +32,7 @@ def run_filtering(args):
     scene_dir = args.data_dir
     print('flitering raft optical flow for {}....'.format(scene_dir))
 
-    img_files = sorted(glob.glob(os.path.join(scene_dir, 'color', '*')))
+    img_files = sorted(glob.glob(os.path.join("..",scene_dir, 'color', '*')))
     num_imgs = len(img_files)
     pbar = tqdm(total=num_imgs * (num_imgs - 1))
 
@@ -47,7 +47,7 @@ def run_filtering(args):
     grid = gen_grid(h, w, device=DEVICE).permute(2, 0, 1)[None]
     grid_normed = normalize_coords(grid.squeeze().permute(1, 2, 0), h, w)  # [h, w, 2]
 
-    features = [torch.from_numpy(np.load(os.path.join(scene_dir, 'features', feature_name,
+    features = [torch.from_numpy(np.load(os.path.join("..",scene_dir, 'features', feature_name,
                                                       os.path.basename(img_file) + '.npy'))).float().to(DEVICE)
                 for img_file in img_files]
 
