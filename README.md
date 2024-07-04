@@ -53,7 +53,9 @@ cd ../
 #### 3. RAFT로 Optical flow 구하기
   - optical flow를 구하는 코드는 다음과 같습니다.
 ```bash
+cd preprocessing
 python main_processing.py --data_dir <sequence directory> --chain
+cd ..
 ```
 - 위 코드를 실행하면 다음과 같은 폴더 구조를 가지게 됩니다.
 ```
