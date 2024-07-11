@@ -1,4 +1,6 @@
 # omnimotion
+- [프로젝트 페이지](https://omnimotion.github.io/)
+- [설명 블로그](https://publish.obsidian.md/uichan980202/%EB%85%BC%EB%AC%B8/CV/%EA%B8%B0%ED%83%80/Tracking+Everything+Everywhere+All+at+Once+(omnimotion))
 
 ## 환경설정
 ### 코드 다운로드
